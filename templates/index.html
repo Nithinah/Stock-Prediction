@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+</head>
+<body>
+    <h1>Stock Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="ticker">Enter Stock Ticker:</label>
+        <input type="text" id="ticker" name="ticker" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if plot_url %}
+        <h2>Prediction Results</h2>
+        <img src="{{ plot_url }}" alt="Stock Prediction Plot">
+        <p>Predicted Next Day Closing Price: <strong>{{ next_day_price }}</strong></p>
+    {% endif %}
+</body>
+</html>
