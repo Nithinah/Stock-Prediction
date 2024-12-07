@@ -1,3 +1,5 @@
+# Stock Prediction
+
 Stock Price Prediction Using Flask and LSTM Model
 This project presents a web-based stock price prediction system developed using Flask, a lightweight Python web framework, and a Long Short-Term Memory (LSTM) neural network. The system enables users to predict the next day’s closing price of a stock by entering its ticker symbol.
 
